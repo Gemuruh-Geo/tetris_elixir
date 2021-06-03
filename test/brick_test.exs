@@ -9,5 +9,12 @@ defmodule BrickTest do
     assert new().reflection == false
   end
 
+  test "Create New Random Brick" do
+    actual = new_random()
+
+    assert actual.name in [:i, :l, :z, :o, :t]
+    assert actual.reflection in [true, false]
+    assert actual.rotation in [0, 90, 180, 270]
+  end
 
 end
